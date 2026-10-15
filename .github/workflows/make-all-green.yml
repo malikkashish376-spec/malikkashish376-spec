@@ -1,0 +1,247 @@
+name: 🟢 All-Green Main Profile & Graph Generator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 14 * * *" # Keeps the streak green automatically every day
+
+permissions:
+  contents: write
+
+jobs:
+  build-profile-and-green-graph:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build KASHISH MALIK README & Generate 365 Days of Green Commits
+        run: |
+          # 👇 CHANGE THIS EMAIL TO KASHISH'S EXACT GITHUB ACCOUNT EMAIL 👇
+          ACCOUNT_EMAIL=malikkashish376@gmail.com
+          GH_USER="${{ github.repository_owner }}"
+
+          git config user.name "$GH_USER"
+          git config user.email "$ACCOUNT_EMAIL"
+
+          cat << EOF > README.md
+          <div align="center">
+
+          \`\`\`text
+          ██╗  ██╗ █████╗ ███████╗██╗  ██╗██╗███████╗██╗  ██╗    ███╗   ███╗ █████╗ ██╗     ██╗██╗  ██╗
+          ██║ ██╔╝██╔══██╗██╔════╝██║  ██║██║██╔════╝██║  ██║    ████╗ ████║██╔══██╗██║     ██║██║ ██╔╝
+          █████╔╝ ███████║███████╗███████║██║███████╗███████║    ██╔████╔██║███████║██║     ██║█████╔╝ 
+          ██╔═██╗ ██╔══██║╚════██║██╔══██║██║╚════██║██╔══██║    ██║╚██╔╝██║██╔══██║██║     ██║██╔═██╗ 
+          ██║  ██╗██║  ██║███████║██║  ██║██║███████║██║  ██║    ██║ ╚═╝ ██║██║  ██║███████╗██║██║  ██╗
+          ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝
+          \`\`\`
+
+          <a href="https://github.com/$GH_USER">
+            <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=800&color=00FF41&center=true&vCenter=true&width=750&lines=Full-Stack+Developer+%26+AI+Innovator+%E2%9A%A1;Building+Scalable+Web+Apps+%26+Smart+Solutions+%F0%9F%9A%80;Open-Source+Contributor+%26+Problem+Solver+%F0%9F%92%BB;Building+for+People%2C+Not+Just+Screens+%F0%9F%8C%90" alt="Typing SVG" />
+          </a>
+
+          <p align="center">
+            <img src="https://img.shields.io/badge/FOCUS-FULL--STACK_%26_AI-2ea043?style=for-the-badge&labelColor=0d1117" alt="Focus" />
+            <img src="https://img.shields.io/github/followers/$GH_USER?label=FOLLOWERS&color=00FF41&labelColor=0d1117&style=for-the-badge" alt="Followers" />
+            <img src="https://img.shields.io/badge/STATUS-BUILDING_%26_SHIPPING-00FF41?style=for-the-badge&labelColor=0d1117" alt="Status" />
+          </p>
+
+          </div>
+
+          ---
+
+          ### \`whoami\`
+
+          \`\`\`javascript
+          const kashish = {
+            name: "Kashish Malik",
+            alias: "$GH_USER",
+            role: "Full-Stack Developer · AI & Web Innovator",
+            location: "India 🇮🇳",
+            currentlyBuilding: ["Scalable Full-Stack Web Apps", "AI-Powered Workflows", "Interactive UIs"],
+            currentlyLearning: ["System Design", "Next.js & TypeScript", "Cloud & DevOps", "Generative AI"],
+            askMeAbout: ["React.js", "Node.js", "Python", "Modern Web Architecture", "UI/UX Engineering"],
+            funFact: "Can spend hours perfecting a single component animation. Always ready for a hackathon."
+          };
+          \`\`\`
+
+          ---
+
+          ### 🏆 Highlights
+
+          <p align="left">
+            <img src="https://img.shields.io/badge/Hackathon_Innovator-Full--Stack_%26_AI-00FF41?style=for-the-badge&logo=github&logoColor=00FF41&labelColor=0d1117" />
+            <img src="https://img.shields.io/badge/Open_Source-Active_Contributor-2ea043?style=for-the-badge&logo=git&logoColor=00FF41&labelColor=0d1117" />
+            <img src="https://img.shields.io/badge/Problem_Solver-DSA_%26_System_Design-10B981?style=for-the-badge&logo=leetcode&logoColor=00FF41&labelColor=0d1117" />
+            <img src="https://img.shields.io/badge/Community-Tech_%26_Developer_Clubs-238636?style=for-the-badge&logo=google&logoColor=00FF41&labelColor=0d1117" />
+          </p>
+
+          ---
+
+          ### 🚀 Featured Projects
+          *(Click on any project below to expand architecture & highlights)*
+
+          <details open>
+          <summary><b>⚡ AI-Powered Smart Web Platform</b></summary>
+          <br>
+
+          \`React.js\` · \`Node.js\` · \`TypeScript\` · \`Tailwind CSS\` · \`REST APIs\`
+
+          Full-stack intelligent web application built for real-time responsiveness, seamless user workflows, and modern cloud deployment.
+          - ⚡ **Real-Time Architecture:** Low-latency state synchronization and responsive component design
+          - 🤖 **AI Integration:** Automated smart workflows powered by modern LLM APIs
+          - 🔒 **Scalable Backend:** Modular API design with secure authentication and database indexing
+          </details>
+
+          <br>
+
+          <details open>
+          <summary><b>🌐 Next-Gen Interactive Developer Portfolio & Dashboard</b></summary>
+          <br>
+
+          \`Next.js\` · \`TypeScript\` · \`Tailwind CSS\` · \`Framer Motion\` · \`Vercel\`
+
+          High-performance interactive web portfolio and analytics dashboard featuring dynamic animations and edge caching.
+          - 🎨 **Pixel-Perfect UI:** Custom dark-mode design system with smooth micro-interactions
+          - 🚀 **100/100 Lighthouse Score:** Optimized bundle delivery and server-side rendering
+          - 🔄 **Automated CI/CD:** Continuous deployment pipeline via GitHub Actions and Vercel
+          </details>
+
+          <br>
+
+          <details open>
+          <summary><b>📊 Smart Data & Predictive Analytics Engine</b></summary>
+          <br>
+
+          \`Python\` · \`Machine Learning\` · \`Data Visualization\` · \`FastAPI\`
+
+          Data processing and predictive analytics tool engineered to transform raw datasets into actionable visual insights.
+          - 📡 **Automated Pipelines:** Cleans, processes, and visualizes real-time data streams
+          - 🧠 **Predictive Modeling:** Uses machine learning algorithms to detect trends and anomalies
+          - 📈 **Interactive Charts:** Clean web interface for exploring live metrics
+          </details>
+
+          ---
+
+          ### 🛠️ Tech Stack
+
+          **Frontend**
+          <p align="left">
+            <img src="https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=nextdotjs&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Tailwind_CSS-0d1117?style=for-the-badge&logo=tailwindcss&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00FF41" />
+          </p>
+
+          **Backend & Database**
+          <p align="left">
+            <img src="https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=nodedotjs&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Express.js-0d1117?style=for-the-badge&logo=express&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/MySQL-0d1117?style=for-the-badge&logo=mysql&logoColor=00FF41" />
+          </p>
+
+          **Languages, AI & Tools**
+          <p align="left">
+            <img src="https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/GitHub_Actions-0d1117?style=for-the-badge&logo=githubactions&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Vercel-0d1117?style=for-the-badge&logo=vercel&logoColor=00FF41" />
+            <img src="https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=00FF41" />
+          </p>
+
+          ---
+
+          ### 📊 GitHub Stats (All-Green Edition)
+
+          <div align="center">
+            <img height="180em" src="https://github-readme-stats.vercel.app/api?username=$GH_USER&show_icons=true&bg_color=0d1117&title_color=00FF41&text_color=c9d1d9&icon_color=2ea043&border_color=2ea043&include_all_commits=true&count_private=true" />
+            <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=$GH_USER&layout=compact&bg_color=0d1117&title_color=00FF41&text_color=c9d1d9&border_color=2ea043" />
+          </div>
+
+          <div align="center">
+            <img src="https://streak-stats.demolab.com?user=$GH_USER&background=0D1117&border=2EA043&stroke=2EA043&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=00FF41&currStreakLabel=2EA043&sideLabels=2EA043&dates=c9d1d9" alt="GitHub Streak" />
+          </div>
+
+          <!-- 🐍 INTERACTIVE GREEN CONTRIBUTION SNAKE -->
+          <div align="center">
+            <img src="https://raw.githubusercontent.com/$GH_USER/$GH_USER/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+          </div>
+
+          ---
+
+          ### 🌐 Community, Hackathons & Leadership
+
+          **Full-Stack Developer & Open-Source Builder** · *Present*
+          - ⚙️ Building and shipping responsive production applications in React, Node.js, and Python
+          - 🚀 Designing automated CI/CD workflows with GitHub Actions and modern cloud platforms
+          - 🤝 Collaborating on national hackathons, developer communities, and peer coding initiatives
+
+          ---
+
+          <div align="center">
+
+          ### 💬 Let's build something great together
+          *Open to SDE internships, hackathon collaborations, and open-source contributions*
+
+          <p align="center">
+            <a href="mailto:$ACCOUNT_EMAIL">
+              <img src="https://img.shields.io/badge/Email-Contact_Me-00FF41?style=for-the-badge&logo=gmail&logoColor=0d1117&labelColor=00FF41" />
+            </a>
+            <a href="https://linkedin.com">
+              <img src="https://img.shields.io/badge/LinkedIn-Kashish_Malik-2ea043?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=0d1117" />
+            </a>
+            <a href="https://github.com/$GH_USER">
+              <img src="https://img.shields.io/badge/GitHub-$GH_USER-10B981?style=for-the-badge&logo=github&logoColor=00FF41&labelColor=0d1117" />
+            </a>
+          </p>
+
+          *"First, solve the problem. Then, write the code."*
+
+          </div>
+          EOF
+
+          git add README.md
+          git commit -m "feat: launch interactive all-green portfolio README for Kashish Malik" || true
+
+          # Backfill 365 days of multi-shade green commits once
+          if [ ! -f .kashish_green_done ]; then
+            for day in $(seq 365 -1 0); do
+              COMMIT_DATE=$(date -u -d "$day days ago 12:00:00" +"%Y-%m-%dT%H:%M:%SZ")
+              COUNT=$(( ( RANDOM % 5 ) + 3 ))
+              for c in $(seq 1$COUNT); do
+                GIT_AUTHOR_DATE="$COMMIT_DATE" GIT_COMMITTER_DATE="$COMMIT_DATE" \
+                  git commit --allow-empty -m "chore: activity sync" --quiet
+              done
+            done
+            touch .kashish_green_done
+            git add .kashish_green_done
+            git commit -m "chore: complete 365-day green graph" --quiet
+          else
+            git commit --allow-empty -m "chore: daily green heartbeat" --quiet
+          fi
+
+          git push origin HEAD:main --force
+
+      - name: Generate Green Contribution Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push Green Snake to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
