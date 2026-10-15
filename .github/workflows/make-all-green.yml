@@ -212,12 +212,12 @@ jobs:
           git add README.md
           git commit -m "feat: launch interactive all-green portfolio README for Kashish Malik" || true
 
-          # Backfill 365 days of multi-shade green commits once
+         # Backfill 365 days of multi-shade green commits once
           if [ ! -f .kashish_green_done ]; then
             for day in $(seq 365 -1 0); do
               COMMIT_DATE=$(date -u -d "$day days ago 12:00:00" +"%Y-%m-%dT%H:%M:%SZ")
               COUNT=$(( ( RANDOM % 5 ) + 3 ))
-              for c in $(seq 1$COUNT); do
+              for c in $(seq 1 $COUNT); do
                 GIT_AUTHOR_DATE="$COMMIT_DATE" GIT_COMMITTER_DATE="$COMMIT_DATE" \
                   git commit --allow-empty -m "chore: activity sync" --quiet
               done
